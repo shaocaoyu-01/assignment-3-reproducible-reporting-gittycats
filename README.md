@@ -2,8 +2,8 @@
 
 Group Members:
 
-*
-*
-*
+* Vishwamber Reddy
+* Cayou Shao
+* Hongyu Yin
 
-Topic: 
+Topic: The Relationship Between Life Expectancy and the Gini Coefficient

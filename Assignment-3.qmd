@@ -1,0 +1,38 @@
+---
+title: "The Relationship Between Life Expectancy and the Gini Coefficient"
+author:
+  - "Vishwamber Reddy"
+  - "Cayou Shao"
+  - "Hongyu Yin"
+format: html
+---
+
+### **Table of contents:** 
+
+Defining using adequate YAML syntax
+
+**Executive summary:**
+
+Maximum of 4 sentences
+
+**Introduction:**
+
+Maximum 10 sentences
+
+-   The body of the report should contain the following sections:
+
+**Methodology:**
+
+Maximum 300 words
+
+Should include a figure and a table and those must be referenced in the text and have adequate captions
+
+**Results:**
+
+Maximum 200 words. Should include either a figure or a table.
+
+**Discussion, conclusion and recommendations**
+
+**Reference section:**
+
+Include at least 1 reference.
