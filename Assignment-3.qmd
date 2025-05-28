@@ -4,35 +4,40 @@ author:
   - "Vishwamber Reddy"
   - "Cayou Shao"
   - "Hongyu Yin"
+toc: true
 format: html
 ---
 
-### **Table of contents:** 
+# **Executive summary**
 
-Defining using adequate YAML syntax
+(Maximum of 4 sentences)
 
-**Executive summary:**
+Studying the relationship between life expectancy and the Gini coefficient is essentially exploring the connection between economic inequality and health inequality.
 
-Maximum of 4 sentences
+In this era that emphasizes economic development, people's physical health should be equally prioritized.
 
-**Introduction:**
+By comparing the Gini coefficients and life expectancies across different economies and regions, we can gain a more intuitive and comprehensive understanding of a particular economy or region's development level.
+
+Furthermore, researching the relationship between these inequalities can provide new directions for economic development goals.
+
+# **Introduction**
 
 Maximum 10 sentences
 
 -   The body of the report should contain the following sections:
 
-**Methodology:**
+# **Methodology**
 
 Maximum 300 words
 
 Should include a figure and a table and those must be referenced in the text and have adequate captions
 
-**Results:**
+# **Results**
 
 Maximum 200 words. Should include either a figure or a table.
 
-**Discussion, conclusion and recommendations**
+# **Discussion, conclusion and recommendations**
 
-**Reference section:**
+# **Reference section**
 
 Include at least 1 reference.
