@@ -2,7 +2,7 @@
 title: "The Relationship Between Life Expectancy and the Gini Coefficient"
 author:
   - "Vishwamber Reddy"
-  - "Cayou Shao"
+  - "Caoyu Shao"
   - "Hongyu Yin"
 toc: true
 format: html
@@ -40,16 +40,125 @@ We utilize **life expectancy** data from **Our World** in Data and **Gini coeffi
 
 # **Methodology**
 
-Maximum 300 words
+```{r}
+# 1. Install & load the WDI package
+if (!require(WDI)) install.packages("WDI")
+library(WDI)
 
-Should include a figure and a table and those must be referenced in the text and have adequate captions
+# 2. Define WDI indicator codes
+indicators <- c(
+  GDPpc       = "NY.GDP.PCAP.CD",     
+  EduTertiary = "SE.TER.ENRR",       
+  HealthExp   = "SH.XPD.CHEX.GD.ZS",  
+  UrbanShare  = "SP.URB.TOTL.IN.ZS",  
+  SmokePrev   = "SH.PRV.SMOK",        
+   Gini    = "SI.POV.GINI",    
+  LifeExp = "SP.DYN.LE00.IN"  )
+
+variables <- WDI(
+  country   = "all",
+  indicator = indicators,
+  start     = 2005,
+  end       = 2025,
+  extra     = FALSE     # adds iso codes, region, income groups, etc.
+)
+
+head(variables)
+```
+
+```{r}
+#pearson test, which is aimed to test the correlations betweent any two variables
+install.packages("Hmisc")
+library(Hmisc)
+
+#    LifeExp, Gini, GDPpc, EduTertiary, HealthExp, UrbanShare, SmokePrev
+vars <- c("LifeExp", "Gini", "GDPpc", "EduTertiary",
+          "HealthExp", "UrbanShare", "SmokePrev")
+
+
+mat <- as.matrix(variables[, vars])
+
+#calculate the P value
+res <- rcorr(mat, type = "pearson")
+
+
+# res$r is the correlation matrix
+print(res$r)
+
+# res$P is the corresponding matrix
+print(res$P)
+
+```
 
 # **Results**
 
 Maximum 200 words. Should include either a figure or a table.
 
 # **Discussion, conclusion and recommendations**
+According to our discussion, we get a conclusion that there is a negative 
+relationship between gini-coefficient and life-expectation. 
+We get four explanations for that.
+
+First, due to resource inequality, there will be more poor people and 
+less rich people if there is a high gini coefficient. Rich people could afford
+higher-quality care, preventive screenings, and insurance, while 
+poorer people may delay or forgo treatment due to cost. And besides Affluent 
+households can buy healthier food and live in cleaner, less crowded 
+environments; low-income families face greater exposure to pollution, 
+overcrowding, and food insecurity.
+
+Second, due to Psychosocial Stress and Social Capital, large income gaps fuel 
+social comparison and status anxiety, triggering persistent stress responses 
+that harm cardiovascular, immune, and endocrine systems. What's more, 
+High-inequality societies often exhibit lower trust and mutual support, 
+reducing the informal networks that share health information and 
+provide neighborhood‐level care.
+
+Third, due to underinvestment in Public Health and Welfare.When tax, welfare,
+and public services disproportionately benefit the well-off, funding for 
+universal healthcare, elder care, and child health programs suffers—limiting 
+gains in overall longevity.Besides, Education strongly influences health 
+literacy and behaviors; in unequal societies, lower-educated groups 
+lack knowledge about disease prevention and healthy lifestyles, increasing
+chronic‐disease risks.
+
+Lastly,due to cumulative and Intergenerational Effect, Childhood 
+poverty—malnutrition, exposure to toxins, or family financial stress—can 
+stunt physical and cognitive development, with effects that persist into 
+adulthood.Besides, in highly unequal settings, children from poor families 
+have fewer opportunities to escape poverty, perpetuating health 
+disadvantages across generations.
 
 # **Reference section**
 
-Include at least 1 reference.
+De Vogli, R., Mistry, R., Gnesotto, R., & Cornia, G. A. (2005). Has
+    the relation between income inequality and life expectancy
+    disappeared? Evidence from Italy and top industrialised countries.
+    Journal of Epidemiology & Community Health, 59(2), 158–162.
+    https://doi.org/10.1136/jech.2004.020651 ResearchGate
+
+-   Preston, S. H. (1975). The changing relation between mortality and
+    level of economic development. Population Studies, 29(2), 231–248.
+    JSTOR
+
+-   Hazan, M. (2012). Life expectancy and schooling: new insights from
+    cross‐country data. Journal of Population Economics, 25, 1237–1248.
+    https://doi.org/10.1007/s00148-011-0392-6 SpringerLink
+
+-   Jaba, E., Bălan, C. B., & Robu, I.-B. (2014). The relationship
+    between life expectancy at birth and health expenditures estimated
+    by a cross‐country and time‐series analysis. Procedia Economics and
+    Finance, 15, 108–114. DergiPark
+
+-   Tripathi, S., & Maiti, M. (2023). Does urbanization improve health
+    outcomes: a cross country level analysis. Asia‐Pacific Journal of
+    Regional Science, 7, 277–316.
+    https://doi.org/10.1007/s41685-022-00268-1 SpringerLink
+
+-   GBD 2015 Tobacco Collaborators. (2017). Smoking prevalence and
+    attributable disease burden in 195 countries and territories,
+    1990–2015: a systematic analysis from the Global Burden of Disease
+    Study 2015. The Lancet, 389(10082), 1885–1906.
+    https://doi.org/10.1016/S0140-6736(17)30819-X thelancet.com
+
+
