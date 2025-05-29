@@ -20,8 +20,7 @@ Furthermore, researching the relationship between these inequalities can provide
 
 # **Introduction**
 
-## **Research Question**
-
+## **Research Question
 In this study, we will explore whether reducing economic inequality contributes to mitigating disparities in life expectancy.
 
 The Gini coefficient is a key indicator for measuring economic inequality within a country or region.Therefore, by examining the relationship between the Gini coefficient and life expectancy, we aim to assess the importance of balanced economic development.
