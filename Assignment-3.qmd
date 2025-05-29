@@ -10,8 +10,6 @@ format: html
 
 # **Executive summary**
 
-(Maximum of 4 sentences)
-
 Studying the relationship between life expectancy and the Gini coefficient is essentially exploring the connection between economic inequality and health inequality.
 
 In this era that emphasizes economic development, people's physical health should be equally prioritized.
@@ -22,9 +20,23 @@ Furthermore, researching the relationship between these inequalities can provide
 
 # **Introduction**
 
-Maximum 10 sentences
+## **Research Question**
+
+In this study, we will explore whether reducing economic inequality contributes to mitigating disparities in life expectancy.
+
+The Gini coefficient is a key indicator for measuring economic inequality within a country or region.Therefore, by examining the relationship between the Gini coefficient and life expectancy, we aim to assess the importance of balanced economic development.
+
+## **Dataset introduction**
+
+We utilize **life expectancy** data from **Our World** in Data and **Gini coefficient** data from **the World Bank**, spanning 1990 to 2020 and covering multiple countries and regions.
 
 -   The body of the report should contain the following sections:
+
+    **Methodology**: How we processed the data.
+
+    **Results**: What conclusions we reached.
+
+    **Discussion, conclusion and recommendations**: Our Intended Message.
 
 # **Methodology**
 
